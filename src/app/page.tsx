@@ -1,12 +1,22 @@
 'use client';
 
-import ScrollSequence from '@/components/ScrollSequence';
-import { motion } from 'framer-motion';
+import { motion, Variants } from "framer-motion";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+import ScrollSequence from '@/components/ScrollSequence';
+
+
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    },
+  },
 };
+
 
 export default function Home() {
   return (
